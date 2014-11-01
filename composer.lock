@@ -4,8 +4,110 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "61cb6359c24b0710307ebfb787cfc53f",
-    "packages": [],
+    "hash": "c11872deeea42b1fe123e570370f1570",
+    "packages": [
+        {
+            "name": "bca/curl",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/brodkinca/BCA-PHP-CURL.git",
+                "reference": "3e2e0e5ab45adb142108e9d75c7dc243ed5852dd"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/brodkinca/BCA-PHP-CURL/zipball/3e2e0e5ab45adb142108e9d75c7dc243ed5852dd",
+                "reference": "3e2e0e5ab45adb142108e9d75c7dc243ed5852dd",
+                "shasum": ""
+            },
+            "require": {
+                "ext-curl": "*",
+                "league/phpunit-coverage-listener": "~1.1",
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~4.0"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "BCA\\CURL\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Ryan Brodkin",
+                    "email": "ryan@brodkinca.com",
+                    "homepage": "http://ryanbrodkin.com/",
+                    "role": "Developer"
+                },
+                {
+                    "name": "Philip Sturgeon",
+                    "email": "email@philsturgeon.co.uk",
+                    "homepage": "http://philsturgeon.co.uk/",
+                    "role": "Original Developer"
+                }
+            ],
+            "description": "cURL wrapper for PHP applications.",
+            "homepage": "https://github.com/brodkinca/BCA-PHP-CURL",
+            "keywords": [
+                "curl",
+                "wrapper"
+            ],
+            "time": "2014-09-17 19:19:44"
+        },
+        {
+            "name": "league/phpunit-coverage-listener",
+            "version": "v1.1.2",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/thephpleague/phpunit-coverage-listener.git",
+                "reference": "dedb0a4de71908de3e6793ecc424925cd3e54dc2"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/thephpleague/phpunit-coverage-listener/zipball/dedb0a4de71908de3e6793ecc424925cd3e54dc2",
+                "reference": "dedb0a4de71908de3e6793ecc424925cd3e54dc2",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.3"
+            },
+            "require-dev": {
+                "phpunit/phpunit": "~3.7"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "League\\PHPUnitCoverageListener": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Taufan Aditya",
+                    "email": "toopay@taufanaditya.com",
+                    "homepage": "http://taufanaditya.com",
+                    "role": "lead"
+                }
+            ],
+            "description": "Utility library that allow you to process the PHPUnit code-coverage information and send it into some remote location via cURL",
+            "homepage": "https://github.com/php-loep/phpunit-coverage-listener",
+            "keywords": [
+                "coverage",
+                "coveralls",
+                "phpunit"
+            ],
+            "time": "2013-10-07 14:31:28"
+        }
+    ],
     "packages-dev": [
         {
             "name": "codeception/codeception",
@@ -1311,7 +1413,9 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": [],
+    "stability-flags": {
+        "bca/curl": 20
+    },
     "prefer-stable": false,
     "platform": [],
     "platform-dev": []
