@@ -115,3 +115,41 @@ $ads2 = $crwl->ads()->region(Regions::MOSCOW)->source(Sources::AUTO_RU)->get();
 ```
 
 Метод `get()` возвращает массив с объявлениями.
+
+### Получение объявления
+
+Для того, чтобы получить объявление, нужно сначала получить объект запроса
+класса `iamsalnikov\crwl\AdQuery`:
+
+```php
+<?php
+
+//...
+
+use \iamsalnikov\crwl\Crwl;
+
+$crwl = new Crwl("API_KEY");
+$adQuery = $crwl->ads();
+```
+
+Для того, чтобы указать, информацию по какому объявлению нужно получить, воспользуйтесь
+методом `url($url)`, который принимает на вход адрес объявления. Данный метод возвращает тот же
+объект.
+
+Для того, чтобы получить объявление используйте метод `get()`, который вернет данные по этому объявлению:
+
+```php
+<?php
+
+//...
+
+use \iamsalnikov\crwl\Crwl;
+
+$crwl = new Crwl("API_KEY");
+$adQuery = $crwl->ad();
+$adQuery->url("some_url_here");
+$ad = $adQuery->get();
+
+// Можно сделать это короче
+$ad2 = $crwl->ad()->url("some_url_here")->get();
+```
