@@ -11,5 +11,12 @@
             "email": "me@iamsalnikov.ru"
         }
     ],
+
+    "autoload": {
+        "psr-4": {
+            "iamsalnikov\\crwl\\": "src/"
+        }
+    },
+
     "require": {}
 }
