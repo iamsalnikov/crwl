@@ -1,6 +1,6 @@
 class_name: CrwlTester
 modules:
-    enabled: [CrwlHelper]
+    enabled: [CrwlHelper, Asserts]
     config:
       CrwlHelper:
         apiKey: "YOUR_API_KEY"

@@ -1,6 +1,8 @@
 {
     "name": "iamsalnikov/crwl",
     "description": "API implementation for crwl.ru",
+    "keywords": ["parser", "crwl.ru", "auto.ru", "irr.ru", "am.ru"],
+    "homepage": "https://github.com/iamsalnikov/crwl",
 
     "require": {
         "bca/curl": "dev-master"

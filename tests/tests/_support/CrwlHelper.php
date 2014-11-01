@@ -9,6 +9,16 @@ class CrwlHelper extends \Codeception\Module
 
     protected $requiredFields = ['apiKey'];
 
-    public $apiKey = '';
+    protected $apiKey = '';
+
+    public function _beforeSuite($settings = [])
+    {
+        $this->apiKey = $settings['modules']['config']['CrwlHelper']['apiKey'];
+    }
+
+    public function getApiKey()
+    {
+        return $this->apiKey;
+    }
 
 }
