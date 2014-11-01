@@ -1,7 +1,6 @@
 <?php
 use \CrwlTester;
 use \iamsalnikov\crwl\Crwl;
-use \Codeception\Util\Debug;
 
 class BadApiKeyCest
 {
