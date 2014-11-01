@@ -7,4 +7,8 @@ namespace Codeception\Module;
 class CrwlHelper extends \Codeception\Module
 {
 
+    protected $requiredFields = ['apiKey'];
+
+    public $apiKey = '';
+
 }

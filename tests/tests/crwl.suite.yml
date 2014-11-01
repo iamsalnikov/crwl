@@ -1,3 +1,6 @@
 class_name: CrwlTester
 modules:
     enabled: [CrwlHelper]
+    config:
+      CrwlHelper:
+        apiKey: "YOUR_API_KEY"
