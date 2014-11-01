@@ -34,6 +34,10 @@ composer require "iamsalnikov/crwl" "dev-master"
 на вход ключ для работы с API.
 
 ```php
+<?php
+
+//...
+
 use \iamsalnikov\crwl\Crwl;
 
 $crwl = new Crwl("API_KEY");
@@ -49,6 +53,10 @@ $crwl = new Crwl("API_KEY");
 класса `iamsalnikov\crwl\AdsQuery`. Делается это очень просто:
 
 ```php
+<?php
+
+//...
+
 use \iamsalnikov\crwl\Crwl;
 
 $crwl = new Crwl("API_KEY");
@@ -70,6 +78,10 @@ last($hours)    | Берем объявления за последние `$hour
 Все эти методы можно соединять в цепочку, т.к. они возвращают тот же объект класса `iamsalnikov\crwl\AdsQuery`:
 
 ```php
+<?php
+
+//...
+
 use \iamsalnikov\crwl\Crwl;
 use \iamsalnikov\crwl\Regions;
 use \iamsalnikov\crwl\Sources;
@@ -85,6 +97,10 @@ $adsQuery2 = $crwl->ads()->region(Regions::MOSCOW)->source(Sources::AUTO_RU);
 Для того, чтобы получить список объявлений, нужно вызвать метод `get()`:
 
 ```php
+<?php
+
+//...
+
 use \iamsalnikov\crwl\Crwl;
 use \iamsalnikov\crwl\Regions;
 use \iamsalnikov\crwl\Sources;
