@@ -1,4 +1,4 @@
-# Crwl - библиотека для работы с api [crwl.ru](http://crwl.ru/)
+# Crwl - пакет для работы с api [crwl.ru](http://crwl.ru/)
 
 1. Описание
 2. Установка
