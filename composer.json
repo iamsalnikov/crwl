@@ -1,9 +1,15 @@
 {
     "name": "iamsalnikov/crwl",
     "description": "API implementation for crwl.ru",
+
+    "require": {
+        "bca/curl": "dev-master"
+    },
+
     "require-dev": {
         "codeception/codeception": "~2.0"
     },
+
     "license": "MIT",
     "authors": [
         {
@@ -16,7 +22,5 @@
         "psr-4": {
             "iamsalnikov\\crwl\\": "src/"
         }
-    },
-
-    "require": {}
+    }
 }
