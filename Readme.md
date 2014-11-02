@@ -1,6 +1,7 @@
 # Crwl - пакет для работы с api [crwl.ru](http://crwl.ru/)
 
-![Build Status](https://travis-ci.org/iamsalnikov/crwl.svg?branch=master)
+[![Build Status](https://travis-ci.org/iamsalnikov/crwl.svg?branch=master)](https://packagist.org/packages/iamsalnikov/crwl)
+[![License](https://poser.pugx.org/iamsalnikov/crwl/license.svg)](https://packagist.org/packages/iamsalnikov/crwl)
 
 1. Описание
 2. Установка
