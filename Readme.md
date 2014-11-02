@@ -13,6 +13,24 @@
 Пакет **iamsalnikov/crwl** дает простой способ для работы с и без того простым api
 сервиса [crwl.ru](http://crwl.ru/).
 
+```php
+<?php
+
+// ...
+use \iamsalnikov\crwl\Crwl;
+use \iamsalnikov\crwl\Regions;
+use \iamsalnikov\crwl\Sources;
+
+$crwl = new Crwl("API_KEY");
+
+// Получаем объявления для Москвы с сайта auto.ru
+$ads = $crwl->ads()->region(Regions::MOSCOW)->source(Sources::AUTO_RU)->get();
+
+// Получаем информацию по одному объявлению
+$ad = $crwl->ad()->url("some_url_here")->get();
+
+```
+
 ## Установка
 
 Пакет устанавливается через [Composer](http://getcomposer.org). Установить его можно двумя способами.
@@ -152,4 +170,39 @@ $ad = $adQuery->get();
 
 // Можно сделать это короче
 $ad2 = $crwl->ad()->url("some_url_here")->get();
+```
+
+### Обработка ошибок
+
+В случае возникновения ошибки метод `get()` классов `iamsalnikov\crwl\AdsQuery` и `iamsalnikov\crwl\AdQuery`
+вернет `false`.
+
+Для получения кода ошибки и текста вызовите методы `getErrorCode()` и `getErrorMessage()`
+класов `iamsalnikov\crwl\AdsQuery` и `iamsalnikov\crwl\AdQuery`.
+
+## Тестирование
+
+Тесты пакета находятся в папке `tests`. Для того, чтобы начать тестирование, нужно указать свой ключ
+к API в настройке модуля `CrwlHelper` в файле `tests/crwl.suite.yml`:
+
+```yaml
+class_name: CrwlTester
+modules:
+    enabled: [CrwlHelper, Asserts]
+    config:
+      CrwlHelper:
+        apiKey: "YOUR_API_KEY"
+```
+
+После этого можно запускать тесты. Для этого перейдите в папку `tests` и запустите codeception. Если он
+установлен глобально, то это можно сделать командой:
+
+```bash
+codecept run
+```
+
+Если он глобально не установлен, то, находясь в папке `tests`, выполните следующую команду:
+
+```bash
+../vendor/bin/codecept run
 ```
