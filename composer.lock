@@ -4,11 +4,11 @@
         "Read more about it at http://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "c11872deeea42b1fe123e570370f1570",
+    "hash": "90c51adb4d699f1755a3021db3769df0",
     "packages": [
         {
             "name": "bca/curl",
-            "version": "dev-master",
+            "version": "2.2.1",
             "source": {
                 "type": "git",
                 "url": "https://github.com/brodkinca/BCA-PHP-CURL.git",
@@ -1413,9 +1413,7 @@
     ],
     "aliases": [],
     "minimum-stability": "stable",
-    "stability-flags": {
-        "bca/curl": 20
-    },
+    "stability-flags": [],
     "prefer-stable": false,
     "platform": [],
     "platform-dev": []

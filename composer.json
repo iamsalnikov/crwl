@@ -5,7 +5,7 @@
     "homepage": "https://github.com/iamsalnikov/crwl",
 
     "require": {
-        "bca/curl": "dev-master"
+        "bca/curl": "*"
     },
 
     "require-dev": {
