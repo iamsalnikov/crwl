@@ -42,7 +42,7 @@ class AdQueryCest
 
         foreach ($ads as $ad) {
             $car = $this->crwl->ad()->url($ad['url'] . 'test')->get();
-            $I->assertEmpty($car);
+            $I->assertFalse($car);
         }
     }
 }

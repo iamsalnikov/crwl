@@ -12,8 +12,8 @@ class BadApiKeyCest
         $query = $crwl->ads();
         $ads = $query->get();
 
-        $I->assertTrue(empty($ads));
-        $I->assertTrue($query->getErrorCode() == 400);
+        $I->assertFalse($ads);
+        $I->assertEquals(400, $query->getErrorCode());
     }
 
     public function queryAdWithWrongApiKey(CrwlTester $I)
@@ -24,7 +24,7 @@ class BadApiKeyCest
         $query = $crwl->ad();
         $ads = $query->get();
 
-        $I->assertTrue(empty($ads));
-        $I->assertTrue($query->getErrorCode() == 400);
+        $I->assertFalse($ads);
+        $I->assertEquals(400, $query->getErrorCode());
     }
 }

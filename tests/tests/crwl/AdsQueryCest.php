@@ -27,7 +27,7 @@ class AdsQueryCest
         $ads = $query->region(Regions::MOSCOW)->source(Sources::AUTO_RU)->get();
 
         $I->assertTrue(is_array($ads));
-        $I->assertFalse(empty($ads));
+        $I->assertNotEmpty($ads);
 
         foreach ($ads as $ad) {
             $I->assertEquals("Москва", $ad['region']);
@@ -39,8 +39,7 @@ class AdsQueryCest
         $query = $this->crwl->ads();
         $ads = $query->region(Regions::MOSCOW)->get();
 
-        $I->assertTrue(is_array($ads));
-        $I->assertTrue(empty($ads));
+        $I->assertFalse($ads);
     }
 
     public function getFromAutoRuWithoutCity(CrwlTester $I)
@@ -49,6 +48,6 @@ class AdsQueryCest
         $ads = $query->source(Sources::AM_RU)->get();
 
         $I->assertTrue(is_array($ads));
-        $I->assertFalse(empty($ads));
+        $I->assertNotEmpty($ads);
     }
 }
