@@ -7,7 +7,7 @@ install:
 - echo "extension=php_curl.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
 - composer install
 script:
-- cd tests && ../vendor/bin/codecept run --coverage-xml
+- cd tests && ../vendor/bin/codecept run
 
 env:
   global:
