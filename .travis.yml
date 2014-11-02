@@ -12,4 +12,4 @@ install:
 secure: "XV4apZjig8YWL/0scUDAJZn2i74bnWILh2oVMJj2o2rMZjaW0tWI/44dzt27OiyPn22w0D/Id5Ba2k7UBrjPyW+pMKbq5H5X95nbfuLJyGytIIxIfYIzkWq/7Ny42nTvKrp+XJB4tYItCPIlXuB9IW/OVmWbuKGqO5w/NZQD8ig="
 
 script:
-  - cd tests && php ../vendor/bin codecept run  # self tests
+  - cd tests && ../vendor/bin/codecept run  # self tests
