@@ -79,7 +79,7 @@ class Query
         if ($response->status() != 200) {
             $this->setErrorCode($response->status());
             $this->setErrorMessage((string) $response);
-            return [];
+            return false;
         }
 
         return json_decode($response, true);
