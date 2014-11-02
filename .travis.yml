@@ -1,15 +1,14 @@
 language: php
-
 php:
-  - 5.4
-  - 5.5
-
+- 5.4
+- 5.5
 install:
-  - sudo apt-get install curl libcurl3 libcurl3-dev
-  - echo "extension=php_curl.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
-  - composer install
-
-secure: "XV4apZjig8YWL/0scUDAJZn2i74bnWILh2oVMJj2o2rMZjaW0tWI/44dzt27OiyPn22w0D/Id5Ba2k7UBrjPyW+pMKbq5H5X95nbfuLJyGytIIxIfYIzkWq/7Ny42nTvKrp+XJB4tYItCPIlXuB9IW/OVmWbuKGqO5w/NZQD8ig="
-
+- sudo apt-get install curl libcurl3 libcurl3-dev
+- echo "extension=php_curl.so" >> ~/.phpenv/versions/$(phpenv version-name)/etc/php.ini
+- composer install
 script:
-  - cd tests && ../vendor/bin/codecept run crwl AdsQueryCest.php --debug  # self tests
+- cd tests && ../vendor/bin/codecept run crwl AdsQueryCest.php --debug
+
+env:
+  global:
+    secure: mp/b9027cAAoyhqb3A+heIVJXtSOReWnY9YBNfkFQjrv1yBTAa2v0J4KgLUygYI8/490PKI2CsFsBC6wzywlPGviW2BiBbfvAwHPLcVBzrLeQAc8fMYXk0j1Lbl/BopxstA+8eTFtDl7e1B9nj6EFev12FG64C7+wIsgrC3x1/s=
