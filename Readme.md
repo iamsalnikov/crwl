@@ -1,5 +1,7 @@
 # Crwl - пакет для работы с api [crwl.ru](http://crwl.ru/)
 
+![Build Status](https://travis-ci.org/iamsalnikov/crwl.svg?branch=master)
+
 1. Описание
 2. Установка
 3. Использование
@@ -183,7 +185,11 @@ $ad2 = $crwl->ad()->url("some_url_here")->get();
 ## Тестирование
 
 Тесты пакета находятся в папке `tests`. Для того, чтобы начать тестирование, нужно указать свой ключ
-к API в настройке модуля `CrwlHelper` в файле `tests/crwl.suite.yml`:
+к API в настройке модуля `CrwlHelper` в файле `tests/crwl.suite.yml`. Ключ можно указать через две переменные:
+
+* `apiKey` - указывается ключ как есть
+* `envVariable` - узкаывается имя переменной окружения, которая содержит ключ. Если установлен параметр `envVariable`,
+то значение `apiKey` будет проигнорировано
 
 ```yaml
 class_name: CrwlTester
