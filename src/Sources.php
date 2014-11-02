@@ -12,4 +12,6 @@ class Sources
     const AVITO_RU = 'avito.ru';
     const AM_RU = 'am.ru';
     const IRR_RU = 'irr.ru';
+    const CARS_MAIL_RU = 'cars.mail.ru';
+    const AVTOBIZON_RU = 'avtobizon.ru';
 }
