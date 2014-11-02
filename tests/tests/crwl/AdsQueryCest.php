@@ -14,6 +14,8 @@ class AdsQueryCest
     public function _before(CrwlTester $I)
     {
         $apiKey = $I->getApiKey();
+        var_dump($apiKey);
+        \Codeception\Util\Debug::debug($apiKey);
         $this->crwl = new Crwl($apiKey);
     }
 
