@@ -6,14 +6,17 @@ namespace Codeception\Module;
 
 class CrwlHelper extends \Codeception\Module
 {
-
-    protected $requiredFields = ['apiKey'];
-
     protected $apiKey = '';
 
     public function _beforeSuite($settings = [])
     {
-        $this->apiKey = $settings['modules']['config']['CrwlHelper']['apiKey'];
+        $config = $settings['modules']['config']['CrwlHelper'];
+
+        if (isset($config['envVariable'])) {
+            $this->apiKey = getenv($config['envVariable']);
+        } elseif (isset($config['apiKey'])) {
+            $this->apiKey = $config['apiKey'];
+        }
     }
 
     public function getApiKey()
