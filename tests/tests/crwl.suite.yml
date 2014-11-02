@@ -3,5 +3,10 @@ modules:
     enabled: [CrwlHelper, Asserts]
     config:
       CrwlHelper:
-        # apiKey: "YOUR_API_KEY" - можно прямо указать ключ
+        #apiKey: "YOUR_API_KEY"
         envVariable: "CRWL_API_KEY" # Если указан envVariable, то переменная будет браться оттуда. Даже если указан apiKey
+
+coverage:
+  enabled: true
+  include:
+    - ../src/*
